@@ -2,7 +2,7 @@
 
 export default {
     name: "AppHeader",
-    Data() {
+    data() {
         return {
             links: [
                 {
@@ -10,39 +10,39 @@ export default {
                     path: 'www.google.com'
                 },
                 {
-                    name: 'CHARACTERS',
+                    name: 'COMIX',
                     path: 'www.google.com'
                 },
                 {
-                    name: 'CHARACTERS',
+                    name: 'MOVIE',
                     path: 'www.google.com'
                 },
                 {
-                    name: 'CHARACTERS',
+                    name: 'TV',
                     path: 'www.google.com'
                 },
                 {
-                    name: 'CHARACTERS',
+                    name: 'GAMES',
                     path: 'www.google.com'
                 },
                 {
-                    name: 'CHARACTERS',
+                    name: 'COLLECTIBLES',
                     path: 'www.google.com'
                 },
                 {
-                    name: 'CHARACTERS',
+                    name: 'VIDEOS',
                     path: 'www.google.com'
                 },
                 {
-                    name: 'CHARACTERS',
+                    name: 'FANS',
                     path: 'www.google.com'
                 },
                 {
-                    name: 'CHARACTERS',
+                    name: 'NEWS',
                     path: 'www.google.com'
                 },
                 {
-                    name: 'CHARACTERS',
+                    name: 'SHOP',
                     path: 'www.google.com'
                 },
             ]
@@ -56,37 +56,11 @@ export default {
         <div id="logo">
             <img src="../assets/img/dc-logo.png" alt="">
         </div>
+
         <nav>
             <ul>
                 <li v-for="link in links">
                     <a href="#">{{ link.name }}</a>
-                </li>
-                <li>
-                    <a href="#">COMIX</a>
-                </li>
-                <li>
-                    <a href="#">ciao</a>
-                </li>
-                <li>
-                    <a href="#">ciao</a>
-                </li>
-                <li>
-                    <a href="#">ciao</a>
-                </li>
-                <li>
-                    <a href="#">ciao</a>
-                </li>
-                <li>
-                    <a href="#">ciao</a>
-                </li>
-                <li>
-                    <a href="#">ciao</a>
-                </li>
-                <li>
-                    <a href="#">ciao</a>
-                </li>
-                <li>
-                    <a href="#">ciao</a>
                 </li>
             </ul>
         </nav>
@@ -95,6 +69,7 @@ export default {
 
 <style lang="scss">
 @use '../styles/general.scss' as *;
+@use '../styles/variables.scss' as *;
 
 header {
     height: 150px;
@@ -117,6 +92,7 @@ header {
             height: 100%;
             display: flex;
             align-items: center;
+            margin-left: 5px;
         }
 
         a {
@@ -124,12 +100,13 @@ header {
             align-items: center;
             height: 100%;
             text-decoration: none;
+            font-size: 20px;
             color: #1c1c1c;
         }
 
         a:hover {
-            border-bottom: 5px solid #307ef8;
-            color: #307ef8;
+            border-bottom: 5px solid $primary;
+            color: $primary;
         }
     }
 }
