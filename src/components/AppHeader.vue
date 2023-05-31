@@ -58,8 +58,8 @@ export default {
         </div>
         <nav>
             <ul>
-                <li>
-                    <a href="#">{{ links[1].name }}</a>
+                <li v-for="link in links">
+                    <a href="#">{{ link.name }}</a>
                 </li>
                 <li>
                     <a href="#">COMIX</a>
