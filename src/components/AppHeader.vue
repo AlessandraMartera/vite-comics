@@ -53,17 +53,20 @@ export default {
 
 <template>
     <header>
-        <div id="logo">
-            <img src="../assets/img/dc-logo.png" alt="">
+        <div class="wrapper">
+            <div id="logo">
+                <img src="../assets/img/dc-logo.png" alt="">
+            </div>
+
+            <nav>
+                <ul>
+                    <li v-for="link in links">
+                        <a href="#">{{ link.name }}</a>
+                    </li>
+                </ul>
+            </nav>
         </div>
 
-        <nav>
-            <ul>
-                <li v-for="link in links">
-                    <a href="#">{{ link.name }}</a>
-                </li>
-            </ul>
-        </nav>
     </header>
 </template>
 
@@ -72,41 +75,45 @@ export default {
 @use '../styles/variables.scss' as *;
 
 header {
-    height: 150px;
     background-color: #fff;
-    display: flex;
-    justify-content: space-around;
 
-    #logo {
-        padding: 20px;
-    }
+    .wrapper {
+        height: 150px;
 
-
-    ul {
-        height: 100%;
         display: flex;
-        gap: 5px;
-        align-items: center;
+        justify-content: space-around;
 
-        li {
-            height: 100%;
-            display: flex;
-            align-items: center;
-            margin-left: 5px;
+        #logo {
+            padding: 20px;
         }
 
-        a {
-            display: flex;
-            align-items: center;
-            height: 100%;
-            text-decoration: none;
-            font-size: 20px;
-            color: #1c1c1c;
-        }
 
-        a:hover {
-            border-bottom: 5px solid $primary;
-            color: $primary;
+        ul {
+            height: 100%;
+            display: flex;
+            gap: 5px;
+            align-items: center;
+
+            li {
+                height: 100%;
+                display: flex;
+                align-items: center;
+                margin-left: 5px;
+            }
+
+            a {
+                display: flex;
+                align-items: center;
+                height: 100%;
+                text-decoration: none;
+                font-size: 20px;
+                color: #1c1c1c;
+            }
+
+            a:hover {
+                border-bottom: 5px solid $primary;
+                color: $primary;
+            }
         }
     }
 }
