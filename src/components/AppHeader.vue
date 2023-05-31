@@ -4,48 +4,46 @@ export default {
     name: "AppHeader",
     Data() {
         return {
-
-
             links: [
                 {
-                    name: 'Character',
-                    path: 'www.wikipedia.org'
+                    name: 'CHARACTERS',
+                    path: 'www.google.com'
                 },
                 {
-                    name: 'Character',
-                    path: 'www.wikipedia.org'
+                    name: 'CHARACTERS',
+                    path: 'www.google.com'
                 },
                 {
-                    name: 'Character',
-                    path: 'www.wikipedia.org'
+                    name: 'CHARACTERS',
+                    path: 'www.google.com'
                 },
                 {
-                    name: 'Character',
-                    path: 'www.wikipedia.org'
+                    name: 'CHARACTERS',
+                    path: 'www.google.com'
                 },
                 {
-                    name: 'Character',
-                    path: 'www.wikipedia.org'
+                    name: 'CHARACTERS',
+                    path: 'www.google.com'
                 },
                 {
-                    name: 'Character',
-                    path: 'www.wikipedia.org'
+                    name: 'CHARACTERS',
+                    path: 'www.google.com'
                 },
                 {
-                    name: 'Character',
-                    path: 'www.wikipedia.org'
+                    name: 'CHARACTERS',
+                    path: 'www.google.com'
                 },
                 {
-                    name: 'Character',
-                    path: 'www.wikipedia.org'
+                    name: 'CHARACTERS',
+                    path: 'www.google.com'
                 },
                 {
-                    name: 'Character',
-                    path: 'www.wikipedia.org'
+                    name: 'CHARACTERS',
+                    path: 'www.google.com'
                 },
                 {
-                    name: 'Character',
-                    path: 'www.wikipedia.org'
+                    name: 'CHARACTERS',
+                    path: 'www.google.com'
                 },
             ]
         }
@@ -55,13 +53,13 @@ export default {
 
 <template>
     <header>
-        <div>
+        <div id="logo">
             <img src="../assets/img/dc-logo.png" alt="">
         </div>
         <nav>
             <ul>
-                <li v-for="link in links">
-                    <a href="#">Character</a>
+                <li>
+                    <a href="#">{{ links[1].name }}</a>
                 </li>
                 <li>
                     <a href="#">COMIX</a>
@@ -104,9 +102,10 @@ header {
     display: flex;
     justify-content: space-around;
 
-    img {
-        margin-top: 20px;
+    #logo {
+        padding: 20px;
     }
+
 
     ul {
         height: 100%;
@@ -121,12 +120,16 @@ header {
         }
 
         a {
+            display: flex;
+            align-items: center;
+            height: 100%;
             text-decoration: none;
             color: #1c1c1c;
         }
 
-        li:hover {
+        a:hover {
             border-bottom: 5px solid #307ef8;
+            color: #307ef8;
         }
     }
 }
