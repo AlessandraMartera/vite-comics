@@ -1,11 +1,12 @@
 <script >
-import AppHeader from './components/AppHeader.vue'
+import AppHeader from './components/AppHeader.vue';
 import AppFooter from './components/AppFooter.vue';
-
+import AppProductList from './components/AppProductList.vue';
 export default {
   components: {
     AppHeader,
-    AppFooter
+    AppFooter,
+    AppProductList
   }
 }
 </script>
@@ -13,7 +14,10 @@ export default {
 <template>
   <AppHeader />
   <main>
-    contenuto
+    <section id="jumbotron"></section>
+    <section>
+      <AppProductList />
+    </section>
   </main>
   <AppFooter />
 </template>
@@ -31,6 +35,12 @@ export default {
   font-weight: 500;
 }
 
+#jumbotron {
+  width: 100%;
+  height: 400px;
+  background-image: url(./assets/img/jumbotron.jpg);
+  background-size: cover;
+}
 
 main {
   color: #fff;
