@@ -1,9 +1,10 @@
 <script >
-
+import productCard from './productCard.vue';
 
 export default {
     name: 'AppProductList',
     components: {
+        productCard
 
     },
     data() {
@@ -88,8 +89,41 @@ export default {
 </script>
 
 <template>
-    main
+    <div id="label_products">
+        CURRENT SERIES
+    </div>
+    <div id="container_cards_product">
+        <div class="wrapper">
+            <productCard v-for="(product, idx) in products" :key="idx" :details="product" />
+        </div>
+
+    </div>
 </template>
   
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+@use '../styles/general.scss' as *;
+@use '../styles/variables.scss' as *;
+
+#label_products {
+    width: 200px;
+    height: 50px;
+    background-color: $primary;
+    position: relative;
+    bottom: 25px;
+    left: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container_cards_product {
+
+    .wrapper {
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}
+</style>
   
