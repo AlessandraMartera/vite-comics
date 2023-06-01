@@ -10,7 +10,10 @@ export default {
 
 <template>
     <div class="card">
-        <img :src="details.thumb" :alt="details.series">
+        <div>
+            <img :src="details.thumb" :alt="details.series">
+        </div>
+
         <div>
             {{ details.series }}
         </div>
@@ -19,11 +22,12 @@ export default {
   
 <style lang="scss" scoped>
 .card {
-    width: 140px;
+    width: calc((100% / 6) - 10px);
     height: 140px;
 
     img {
         width: 100%;
+
     }
 }
 </style>

@@ -13,12 +13,18 @@ export default {
 
 <template>
   <AppHeader />
+  <section id="jumbotron"></section>
   <main>
-    <section id="jumbotron"></section>
-    <section>
-      <AppProductList />
-    </section>
+
+
+
+
+    <AppProductList />
+
+
+
   </main>
+
   <AppFooter />
 </template>
 
@@ -44,5 +50,6 @@ export default {
 
 main {
   color: #fff;
+
 }
 </style>
