@@ -89,12 +89,16 @@ export default {
 </script>
 
 <template>
-    <div id="label_products">
-        CURRENT SERIES
-    </div>
     <div class="wrapper">
+        <div id="label_products">
+            CURRENT SERIES
+        </div>
         <div id="container_cards_product">
             <productCard v-for="(product, idx) in products" :key="idx" :details="product" />
+        </div>
+
+        <div id="button_section">
+            <button>LOAD MORE</button>
         </div>
     </div>
 </template>
@@ -109,7 +113,7 @@ export default {
     background-color: $primary;
     position: relative;
     bottom: 25px;
-    left: 200px;
+    left: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -120,6 +124,20 @@ export default {
     flex-wrap: wrap;
     gap: 10px;
     padding: 40px;
+}
+
+#button_section {
+    text-align: center;
+    padding: 40px;
+
+    button {
+        width: 200px;
+        height: 50px;
+        border: none;
+        background-color: $primary;
+        color: #fff;
+        cursor: pointer;
+    }
 }
 </style>
   
