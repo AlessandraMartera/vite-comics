@@ -116,11 +116,10 @@ export default {
 }
 
 #container_cards_product {
-    height: 100%;
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-
+    padding: 40px;
 }
 </style>
   

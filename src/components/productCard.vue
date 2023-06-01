@@ -14,7 +14,7 @@ export default {
             <img :src="details.thumb" :alt="details.series">
         </div>
 
-        <div>
+        <div class="title_card">
             {{ details.series }}
         </div>
     </div>
@@ -23,11 +23,14 @@ export default {
 <style lang="scss" scoped>
 .card {
     width: calc((100% / 6) - 10px);
-    height: 140px;
 
     img {
         width: 100%;
+        aspect-ratio: 1 / 1;
+    }
 
+    .title_card {
+        margin-top: 5px
     }
 }
 </style>
