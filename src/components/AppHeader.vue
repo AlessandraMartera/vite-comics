@@ -70,7 +70,7 @@ export default {
     </header>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @use '../styles/general.scss' as *;
 @use '../styles/variables.scss' as *;
 

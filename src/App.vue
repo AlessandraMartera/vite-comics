@@ -21,6 +21,16 @@ export default {
 <style lang="scss">
 @use './styles/general.scss' as *;
 @use './styles/variables.scss' as *;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap');
+
+* {
+  font-family: 'Montserrat',
+    sans-serif;
+  font-family: 'Ubuntu',
+    sans-serif;
+  font-weight: 500;
+}
+
 
 main {
   color: #fff;
